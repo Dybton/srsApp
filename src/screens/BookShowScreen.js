@@ -2,11 +2,13 @@ import React from 'react';
 import {View, Image, Text, StyleSheet } from 'react-native';
 
 const BookShowScreen = ( { navigation } ) => {
-    const name = navigation.getParam('name')
+    const book = navigation.getParam('book')
+    // const author = navigation.getParam('author')
 
-    console.log(name)
+    console.log(book)
     return <View>
-        <Text> {name} </Text>
+        <Text> Title: {book.name} </Text>
+        <Text> Author: {book.author} </Text>
     </View>
 };
 

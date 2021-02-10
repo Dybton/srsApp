@@ -6,10 +6,10 @@ import MyGrid from '../components/MyGrid';
 
 const HomeScreen = ({ navigation }) => {
     const books = [
-        {name: 'Sapiens'},
-        {name: 'Atomic Habits'},
-        {name: 'Antifragile'},
-        {name: 'Language'}
+        {name: 'Sapiens', author: 'Yuval Noah Harrari'},
+        {name: 'Atomic Habits', author: 'James Clear'},
+        {name: 'Antifragile', author: 'Nassim Taleb'},
+        {name: 'Language', author: 'Stupid'}
         // I need to find a way to pass these in another way
     ];
 
@@ -25,7 +25,6 @@ const HomeScreen = ({ navigation }) => {
                 />
                 <MyButton title='Study cards'/>
             </View>
-            
         </View>
     );  
 };

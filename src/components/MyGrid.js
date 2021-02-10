@@ -13,7 +13,7 @@ const MyGrid = ({books, navigation}) => {
                 numColumns={2}
                 renderItem={({item}) => {
                     return (
-                        <TouchableOpacity onPress={() => navigation.navigate('Book', {name: item.name })}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Book', {book: item})}>
                             <BookDetail result={item}/> 
                         {/* // Note, den øvrige burde jeg putte i sit eget component, se video 113-115 (tror jeg) */}
                         </TouchableOpacity>

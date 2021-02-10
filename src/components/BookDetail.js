@@ -2,8 +2,10 @@ import React from 'react';
 import {View, Image, Text, StyleSheet } from 'react-native';
 
 const BookDetail = ({result}) => {
-    return <View>
-        <Text style={styles.myBook}> {result.name} </Text>
+    return <View style={styles.myBook}>
+        <Text> {result.name} </Text>
+        <Text> Author:</Text>
+        <Text> {result.author} </Text>
     </View>
 };
 
