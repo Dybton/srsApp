@@ -1,15 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOp } from 'react-native';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
+import BookDetail from './BookDetail';
 
 
-const MyGrid = ({navigation}) => {
-    const books = [
-        {name: 'Sapiens'},
-        {name: 'Atomic Habits'},
-        {name: 'Antifragile'},
-        {name: 'Language'}
-        // I need to find a way to pass these in another way
-    ];
+const MyGrid = ({books, navigation}) => {
     
     return (
         <View style={styles.myGridContainer}>
@@ -18,8 +12,13 @@ const MyGrid = ({navigation}) => {
                 data={books}
                 numColumns={2}
                 renderItem={({item}) => {
-                    return <Text style={styles.myBook}> {item.name} </Text>
-                }}
+                    return (
+                        <TouchableOpacity onPress={() => navigation.navigate('Book', {name: item.name })}>
+                            <BookDetail result={item}/> 
+                        {/* // Note, den øvrige burde jeg putte i sit eget component, se video 113-115 (tror jeg) */}
+                        </TouchableOpacity>
+                        )
+                    }}
                 /> 
             {/* <Text style={styles.myBook}> Griddy </Text> */}
         </View>

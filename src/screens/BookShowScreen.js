@@ -1,9 +1,12 @@
 import React from 'react';
 import {View, Image, Text, StyleSheet } from 'react-native';
 
-const BookShowScreen = () => {
+const BookShowScreen = ( { navigation } ) => {
+    const name = navigation.getParam('name')
+
+    console.log(name)
     return <View>
-        <Text> Results Detail </Text>
+        <Text> {name} </Text>
     </View>
 };
 

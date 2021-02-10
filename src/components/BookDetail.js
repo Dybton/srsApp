@@ -1,12 +1,20 @@
 import React from 'react';
 import {View, Image, Text, StyleSheet } from 'react-native';
 
-const BookDetail = () => {
+const BookDetail = ({result}) => {
     return <View>
-        <Text> Results Detail </Text>
+        <Text style={styles.myBook}> {result.name} </Text>
     </View>
 };
 
-const styles = StyleSheet({});
+const styles = StyleSheet.create({
+    myBook: {
+        borderWidth: 2,
+        borderColor: 'red',
+        paddingVertical: 60,
+        paddingHorizontal: 20,
+        flex: 1,
+    }
+});
 
 export default BookDetail;

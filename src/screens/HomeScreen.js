@@ -4,7 +4,15 @@ import { Entypo } from '@expo/vector-icons';
 import MyButton from '../components/MyButton';
 import MyGrid from '../components/MyGrid';
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({ navigation }) => {
+    const books = [
+        {name: 'Sapiens'},
+        {name: 'Atomic Habits'},
+        {name: 'Antifragile'},
+        {name: 'Language'}
+        // I need to find a way to pass these in another way
+    ];
+
     return (
         <View>
             <View style={styles.container}>
@@ -13,6 +21,7 @@ const HomeScreen = ({navigation}) => {
             <View>
                 <MyGrid
                     navigation={navigation}
+                    books={books}
                 />
                 <MyButton title='Study cards'/>
             </View>

@@ -4,10 +4,11 @@ import WelcomeScreen from './src/screens/WelcomeScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import BookShowScreen from './src/screens/BookShowScreen';
 
+
 const navigator = createStackNavigator({
   Welcome: WelcomeScreen,
   Home: HomeScreen,
-  Boook: BookShowScreen,
+  Book: BookShowScreen,
 }, {
   initialRouteName: 'Welcome',
   defaultNavigationOptions: {
